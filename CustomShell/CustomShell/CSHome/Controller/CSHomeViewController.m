@@ -8,6 +8,8 @@
 
 #import "CSHomeViewController.h"
 
+#import "CSShellViewController.h"
+
 @interface CSHomeViewController ()
 
 @end
@@ -17,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIButton *enterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    enterBtn.frame = CGRectMake(100, 100, 100, 40);
+    [enterBtn setTitle:@"进入" forState:UIControlStateNormal];
+    [enterBtn addTarget:self action:@selector(enterButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:enterBtn];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +31,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Button Action
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)enterButtonAction {
+    CSShellViewController *shellVC = [[CSShellViewController alloc] init];
+    [self.navigationController pushViewController:shellVC animated:YES];
 }
-*/
 
 @end

@@ -19,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    CSHomeViewController *homeVC = [[CSHomeViewController alloc] init];
+    homeVC.title = @"首页";
+    UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    
+    self.viewControllers = @[homeNavi];
 }
 
 - (void)didReceiveMemoryWarning {
