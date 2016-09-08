@@ -8,7 +8,6 @@
 
 #import "CSHomeViewController.h"
 
-#import "CSShellViewController.h"
 
 @interface CSHomeViewController ()
 

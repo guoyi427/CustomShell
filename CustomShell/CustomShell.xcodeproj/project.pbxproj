@@ -7,16 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2837E4E71D17E588009B8DA0 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2837E4E61D17E588009B8DA0 /* GLKit.framework */; };
-		2837E4E91D17E596009B8DA0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2837E4E81D17E596009B8DA0 /* OpenGLES.framework */; };
-		2837E4EC1D17E666009B8DA0 /* CSShellViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2837E4EB1D17E666009B8DA0 /* CSShellViewController.mm */; };
-		2837E4EF1D17EE0F009B8DA0 /* CSStlParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2837E4EE1D17EE0F009B8DA0 /* CSStlParser.mm */; };
-		2837E4F61D17EEF2009B8DA0 /* mySolid.stl in Resources */ = {isa = PBXBuildFile; fileRef = 2837E4F01D17EEF2009B8DA0 /* mySolid.stl */; };
-		2837E4F71D17EEF2009B8DA0 /* myStl.stl in Resources */ = {isa = PBXBuildFile; fileRef = 2837E4F11D17EEF2009B8DA0 /* myStl.stl */; };
-		2837E4F81D17EEF2009B8DA0 /* RevolvedModel.stl in Resources */ = {isa = PBXBuildFile; fileRef = 2837E4F21D17EEF2009B8DA0 /* RevolvedModel.stl */; };
-		2837E4F91D17EEF2009B8DA0 /* RevolvedModel2.stl in Resources */ = {isa = PBXBuildFile; fileRef = 2837E4F31D17EEF2009B8DA0 /* RevolvedModel2.stl */; };
-		2837E4FA1D17EEF2009B8DA0 /* visualization_-_aerial.stl in Resources */ = {isa = PBXBuildFile; fileRef = 2837E4F41D17EEF2009B8DA0 /* visualization_-_aerial.stl */; };
-		2837E4FB1D17EEF2009B8DA0 /* visualization_-_aerial2.stl in Resources */ = {isa = PBXBuildFile; fileRef = 2837E4F51D17EEF2009B8DA0 /* visualization_-_aerial2.stl */; };
 		2879CE8A1D13ABDC00AD7F60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CE891D13ABDC00AD7F60 /* main.m */; };
 		2879CE8D1D13ABDC00AD7F60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CE8C1D13ABDC00AD7F60 /* AppDelegate.m */; };
 		2879CE951D13ABDC00AD7F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2879CE941D13ABDC00AD7F60 /* Assets.xcassets */; };
@@ -26,6 +16,7 @@
 		2879CEC51D13ACA000AD7F60 /* CSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CEC41D13ACA000AD7F60 /* CSBaseViewController.m */; };
 		2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CEC71D13D4E300AD7F60 /* CSTabBarController.m */; };
 		2879CECB1D13D4F400AD7F60 /* CSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */; };
+		30B18F031D814BFA00366EA3 /* CSShellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F021D814BFA00366EA3 /* CSShellViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,18 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2837E4E61D17E588009B8DA0 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		2837E4E81D17E596009B8DA0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		2837E4EA1D17E666009B8DA0 /* CSShellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSShellViewController.h; sourceTree = "<group>"; };
-		2837E4EB1D17E666009B8DA0 /* CSShellViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CSShellViewController.mm; sourceTree = "<group>"; };
-		2837E4ED1D17EE0F009B8DA0 /* CSStlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStlParser.h; sourceTree = "<group>"; };
-		2837E4EE1D17EE0F009B8DA0 /* CSStlParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CSStlParser.mm; sourceTree = "<group>"; };
-		2837E4F01D17EEF2009B8DA0 /* mySolid.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = mySolid.stl; sourceTree = "<group>"; };
-		2837E4F11D17EEF2009B8DA0 /* myStl.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = myStl.stl; sourceTree = "<group>"; };
-		2837E4F21D17EEF2009B8DA0 /* RevolvedModel.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = RevolvedModel.stl; sourceTree = "<group>"; };
-		2837E4F31D17EEF2009B8DA0 /* RevolvedModel2.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = RevolvedModel2.stl; sourceTree = "<group>"; };
-		2837E4F41D17EEF2009B8DA0 /* visualization_-_aerial.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "visualization_-_aerial.stl"; sourceTree = "<group>"; };
-		2837E4F51D17EEF2009B8DA0 /* visualization_-_aerial2.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "visualization_-_aerial2.stl"; sourceTree = "<group>"; };
 		2879CE851D13ABDC00AD7F60 /* CustomShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2879CE891D13ABDC00AD7F60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2879CE8B1D13ABDC00AD7F60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +56,8 @@
 		2879CEC71D13D4E300AD7F60 /* CSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTabBarController.m; sourceTree = "<group>"; };
 		2879CEC91D13D4F400AD7F60 /* CSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHomeViewController.h; sourceTree = "<group>"; };
 		2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHomeViewController.m; sourceTree = "<group>"; };
+		30B18F011D814BFA00366EA3 /* CSShellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSShellViewController.h; sourceTree = "<group>"; };
+		30B18F021D814BFA00366EA3 /* CSShellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSShellViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2837E4E91D17E596009B8DA0 /* OpenGLES.framework in Frameworks */,
-				2837E4E71D17E588009B8DA0 /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +88,6 @@
 		2879CE7C1D13ABDC00AD7F60 = {
 			isa = PBXGroup;
 			children = (
-				2837E4E81D17E596009B8DA0 /* OpenGLES.framework */,
-				2837E4E61D17E588009B8DA0 /* GLKit.framework */,
 				2879CE871D13ABDC00AD7F60 /* CustomShell */,
 				2879CEA11D13ABDC00AD7F60 /* CustomShellTests */,
 				2879CEAC1D13ABDC00AD7F60 /* CustomShellUITests */,
@@ -138,12 +115,6 @@
 				2879CE941D13ABDC00AD7F60 /* Assets.xcassets */,
 				2879CE961D13ABDC00AD7F60 /* LaunchScreen.storyboard */,
 				2879CE991D13ABDC00AD7F60 /* Info.plist */,
-				2837E4F01D17EEF2009B8DA0 /* mySolid.stl */,
-				2837E4F11D17EEF2009B8DA0 /* myStl.stl */,
-				2837E4F21D17EEF2009B8DA0 /* RevolvedModel.stl */,
-				2837E4F31D17EEF2009B8DA0 /* RevolvedModel2.stl */,
-				2837E4F41D17EEF2009B8DA0 /* visualization_-_aerial.stl */,
-				2837E4F51D17EEF2009B8DA0 /* visualization_-_aerial2.stl */,
 				2879CE881D13ABDC00AD7F60 /* Supporting Files */,
 			);
 			path = CustomShell;
@@ -225,8 +196,8 @@
 			children = (
 				2879CEC91D13D4F400AD7F60 /* CSHomeViewController.h */,
 				2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */,
-				2837E4EA1D17E666009B8DA0 /* CSShellViewController.h */,
-				2837E4EB1D17E666009B8DA0 /* CSShellViewController.mm */,
+				30B18F011D814BFA00366EA3 /* CSShellViewController.h */,
+				30B18F021D814BFA00366EA3 /* CSShellViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,8 +212,6 @@
 		2879CEC21D13AC1000AD7F60 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2837E4ED1D17EE0F009B8DA0 /* CSStlParser.h */,
-				2837E4EE1D17EE0F009B8DA0 /* CSStlParser.mm */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,13 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2879CE981D13ABDC00AD7F60 /* LaunchScreen.storyboard in Resources */,
-				2837E4FB1D17EEF2009B8DA0 /* visualization_-_aerial2.stl in Resources */,
-				2837E4FA1D17EEF2009B8DA0 /* visualization_-_aerial.stl in Resources */,
 				2879CE951D13ABDC00AD7F60 /* Assets.xcassets in Resources */,
-				2837E4F61D17EEF2009B8DA0 /* mySolid.stl in Resources */,
-				2837E4F71D17EEF2009B8DA0 /* myStl.stl in Resources */,
-				2837E4F81D17EEF2009B8DA0 /* RevolvedModel.stl in Resources */,
-				2837E4F91D17EEF2009B8DA0 /* RevolvedModel2.stl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,12 +346,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2879CECB1D13D4F400AD7F60 /* CSHomeViewController.m in Sources */,
-				2837E4EC1D17E666009B8DA0 /* CSShellViewController.mm in Sources */,
+				30B18F031D814BFA00366EA3 /* CSShellViewController.m in Sources */,
 				2879CEC51D13ACA000AD7F60 /* CSBaseViewController.m in Sources */,
 				2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */,
 				2879CE8D1D13ABDC00AD7F60 /* AppDelegate.m in Sources */,
 				2879CE8A1D13ABDC00AD7F60 /* main.m in Sources */,
-				2837E4EF1D17EE0F009B8DA0 /* CSStlParser.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
