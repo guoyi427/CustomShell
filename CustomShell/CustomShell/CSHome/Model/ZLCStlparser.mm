@@ -62,11 +62,6 @@ struct pointInfo
 //    value = [NSValue valueWithBytes:&pro objCType:@encode(pointInfo)];
     
     
-    
-    
-    
-    
-    
     NSString* mTxt=[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     std::ifstream inSTL;
     std::string fp  = [path UTF8String];

@@ -8,14 +8,25 @@
 
 #import "CSShellViewController.h"
 
-@interface CSShellViewController ()
+#import "CSGLView.h"
 
+@interface CSShellViewController ()
+{
+    CSGLView *_glView;
+}
 @end
 
 @implementation CSShellViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _glView = [[CSGLView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:_glView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [_glView renderStlWithName:@"DLAM"];
 }
 
 - (void)didReceiveMemoryWarning {

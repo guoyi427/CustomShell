@@ -21,6 +21,10 @@
 		30B18F1F1D814F1700366EA3 /* ksMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F191D814F1700366EA3 /* ksMatrix.c */; };
 		30B18F201D814F1700366EA3 /* ksVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F1B1D814F1700366EA3 /* ksVector.c */; };
 		30B18F211D814F1700366EA3 /* ZLCStlparser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */; };
+		30B18F231D8153F300366EA3 /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F221D8153F300366EA3 /* VertexShader.glsl */; };
+		30B18F251D81545600366EA3 /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F241D81545600366EA3 /* FragmentShader.glsl */; };
+		30B18F291D81708E00366EA3 /* DLAM.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F281D81708E00366EA3 /* DLAM.stl */; };
+		30B18F2B1D81713900366EA3 /* myStl.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F2A1D81713900366EA3 /* myStl.stl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		30B18F1C1D814F1700366EA3 /* ksVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ksVector.h; sourceTree = "<group>"; };
 		30B18F1D1D814F1700366EA3 /* ZLCStlparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCStlparser.h; sourceTree = "<group>"; };
 		30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZLCStlparser.mm; sourceTree = "<group>"; };
+		30B18F221D8153F300366EA3 /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
+		30B18F241D81545600366EA3 /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
+		30B18F281D81708E00366EA3 /* DLAM.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = DLAM.stl; sourceTree = "<group>"; };
+		30B18F2A1D81713900366EA3 /* myStl.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = myStl.stl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,8 @@
 				2879CE941D13ABDC00AD7F60 /* Assets.xcassets */,
 				2879CE961D13ABDC00AD7F60 /* LaunchScreen.storyboard */,
 				2879CE991D13ABDC00AD7F60 /* Info.plist */,
+				30B18F2A1D81713900366EA3 /* myStl.stl */,
+				30B18F281D81708E00366EA3 /* DLAM.stl */,
 				2879CE881D13ABDC00AD7F60 /* Supporting Files */,
 			);
 			path = CustomShell;
@@ -223,6 +233,8 @@
 				30B18F1C1D814F1700366EA3 /* ksVector.h */,
 				30B18F1D1D814F1700366EA3 /* ZLCStlparser.h */,
 				30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */,
+				30B18F221D8153F300366EA3 /* VertexShader.glsl */,
+				30B18F241D81545600366EA3 /* FragmentShader.glsl */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,8 +351,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B18F291D81708E00366EA3 /* DLAM.stl in Resources */,
 				2879CE981D13ABDC00AD7F60 /* LaunchScreen.storyboard in Resources */,
 				2879CE951D13ABDC00AD7F60 /* Assets.xcassets in Resources */,
+				30B18F251D81545600366EA3 /* FragmentShader.glsl in Resources */,
+				30B18F231D8153F300366EA3 /* VertexShader.glsl in Resources */,
+				30B18F2B1D81713900366EA3 /* myStl.stl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,6 @@
 
 @interface ZLCStlparser : NSObject
 
-
-
-
 //解析obj文件，根据文件路径
 + (NSValue *)ParserStlFileWithfilaPath:(NSString *)path;
 

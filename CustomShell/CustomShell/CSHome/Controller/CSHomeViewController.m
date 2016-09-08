@@ -23,6 +23,7 @@
     UIButton *enterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     enterBtn.frame = CGRectMake(100, 100, 100, 40);
     [enterBtn setTitle:@"进入" forState:UIControlStateNormal];
+    [enterBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     [enterBtn addTarget:self action:@selector(enterButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:enterBtn];
 }
