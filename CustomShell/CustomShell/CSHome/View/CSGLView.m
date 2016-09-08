@@ -33,7 +33,7 @@ struct STL_VertexInfo {
     CGPoint _rotatePoint;
     CGPoint _touchBeganPoint;
     
-    NSString *_stlName;
+    NSString *_stlPath;
     float *_stl_vertices;
     int _faceCount;
 }
@@ -177,13 +177,13 @@ struct STL_VertexInfo {
     glUniformMatrix4fv(_modelViewSlot, 1, GL_FALSE, &_modelViewMatrix.m[0][0]);
 }
 
-- (void)renderStlWithName:(NSString *)name {
+- (void)renderStlWithPath:(NSString *)path {
     glClearColor(0, 0.6, 0.5, 1);
     glClear(GL_COLOR_BUFFER_BIT);
     
     glViewport(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     
-    [self _prepareStlWithName:name];
+    [self _prepareStlWithPath:path];
     
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(float)*8, _stl_vertices);
     glEnableVertexAttribArray(_positionSlot);
@@ -193,9 +193,9 @@ struct STL_VertexInfo {
     [_context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
-- (void)_prepareStlWithName:(NSString *)name {
-    _stlName = name;
-    NSValue *stlValue = [ZLCStlparser ParserStlFileWithfilaPath:[[NSBundle mainBundle] pathForResource:name ofType:@"stl"]];
+- (void)_prepareStlWithPath:(NSString *)path {
+    _stlPath = path;
+    NSValue *stlValue = [ZLCStlparser ParserStlFileWithfilaPath:path];
     struct STL_VertexInfo info;
     [stlValue getValue:&info];
     
@@ -216,7 +216,7 @@ struct STL_VertexInfo {
     _rotatePoint = CGPointMake(point.x - _touchBeganPoint.x, point.y - _touchBeganPoint.y);
     
     [self _updateModelView];
-    [self renderStlWithName:_stlName];
+    [self renderStlWithPath:_stlPath];
 }
 
 @end

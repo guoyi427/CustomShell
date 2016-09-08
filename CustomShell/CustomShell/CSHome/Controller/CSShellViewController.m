@@ -9,6 +9,7 @@
 #import "CSShellViewController.h"
 
 #import "CSGLView.h"
+#import "CSHomeModel.h"
 
 @interface CSShellViewController ()
 {
@@ -26,7 +27,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [_glView renderStlWithName:@"DLAM"];
+    [_glView renderStlWithPath:_model.path];
 }
 
 - (void)didReceiveMemoryWarning {

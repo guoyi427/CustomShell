@@ -8,6 +8,9 @@
 
 #import "CSBaseViewController.h"
 
+@class CSHomeModel;
 @interface CSShellViewController : CSBaseViewController
+
+@property (nonatomic, strong) CSHomeModel *model;
 
 @end

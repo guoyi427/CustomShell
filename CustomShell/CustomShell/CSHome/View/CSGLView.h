@@ -10,6 +10,6 @@
 
 @interface CSGLView : UIView
 
-- (void)renderStlWithName:(NSString *)name;
+- (void)renderStlWithPath:(NSString *)path;
 
 @end
