@@ -8,6 +8,8 @@
 
 #import "CSHomeViewController.h"
 
+//  Controller
+#import "CSShellViewController.h"
 
 @interface CSHomeViewController ()
 
@@ -34,6 +36,7 @@
 
 - (void)enterButtonAction {
     CSShellViewController *shellVC = [[CSShellViewController alloc] init];
+    shellVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:shellVC animated:YES];
 }
 

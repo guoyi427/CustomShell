@@ -17,6 +17,10 @@
 		2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CEC71D13D4E300AD7F60 /* CSTabBarController.m */; };
 		2879CECB1D13D4F400AD7F60 /* CSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */; };
 		30B18F031D814BFA00366EA3 /* CSShellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F021D814BFA00366EA3 /* CSShellViewController.m */; };
+		30B18F061D814E9900366EA3 /* CSGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F051D814E9900366EA3 /* CSGLView.m */; };
+		30B18F1F1D814F1700366EA3 /* ksMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F191D814F1700366EA3 /* ksMatrix.c */; };
+		30B18F201D814F1700366EA3 /* ksVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F1B1D814F1700366EA3 /* ksVector.c */; };
+		30B18F211D814F1700366EA3 /* ZLCStlparser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,14 @@
 		2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHomeViewController.m; sourceTree = "<group>"; };
 		30B18F011D814BFA00366EA3 /* CSShellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSShellViewController.h; sourceTree = "<group>"; };
 		30B18F021D814BFA00366EA3 /* CSShellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSShellViewController.m; sourceTree = "<group>"; };
+		30B18F041D814E9900366EA3 /* CSGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGLView.h; sourceTree = "<group>"; };
+		30B18F051D814E9900366EA3 /* CSGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSGLView.m; sourceTree = "<group>"; };
+		30B18F191D814F1700366EA3 /* ksMatrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ksMatrix.c; sourceTree = "<group>"; };
+		30B18F1A1D814F1700366EA3 /* ksMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ksMatrix.h; sourceTree = "<group>"; };
+		30B18F1B1D814F1700366EA3 /* ksVector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ksVector.c; sourceTree = "<group>"; };
+		30B18F1C1D814F1700366EA3 /* ksVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ksVector.h; sourceTree = "<group>"; };
+		30B18F1D1D814F1700366EA3 /* ZLCStlparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCStlparser.h; sourceTree = "<group>"; };
+		30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZLCStlparser.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +217,12 @@
 		2879CEC11D13AC1000AD7F60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30B18F191D814F1700366EA3 /* ksMatrix.c */,
+				30B18F1A1D814F1700366EA3 /* ksMatrix.h */,
+				30B18F1B1D814F1700366EA3 /* ksVector.c */,
+				30B18F1C1D814F1700366EA3 /* ksVector.h */,
+				30B18F1D1D814F1700366EA3 /* ZLCStlparser.h */,
+				30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +230,8 @@
 		2879CEC21D13AC1000AD7F60 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30B18F041D814E9900366EA3 /* CSGLView.h */,
+				30B18F051D814E9900366EA3 /* CSGLView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,8 +368,12 @@
 				2879CECB1D13D4F400AD7F60 /* CSHomeViewController.m in Sources */,
 				30B18F031D814BFA00366EA3 /* CSShellViewController.m in Sources */,
 				2879CEC51D13ACA000AD7F60 /* CSBaseViewController.m in Sources */,
+				30B18F201D814F1700366EA3 /* ksVector.c in Sources */,
 				2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */,
+				30B18F061D814E9900366EA3 /* CSGLView.m in Sources */,
+				30B18F211D814F1700366EA3 /* ZLCStlparser.mm in Sources */,
 				2879CE8D1D13ABDC00AD7F60 /* AppDelegate.m in Sources */,
+				30B18F1F1D814F1700366EA3 /* ksMatrix.c in Sources */,
 				2879CE8A1D13ABDC00AD7F60 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
