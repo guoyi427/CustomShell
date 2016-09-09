@@ -27,7 +27,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [_glView renderStlWithPath:_model.path];
+    if (_model.path) {
+        [_glView renderStlWithPath:_model.path];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

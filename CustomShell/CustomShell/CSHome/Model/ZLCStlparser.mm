@@ -719,10 +719,10 @@ struct pointInfo
     }
     
     
-    NSLog(@"xyz最小：%f,%f,%f",xMin,yMin,zMin);
-    NSLog(@"xyz最大：%f,%f,%f",xMax,yMax,zMax);
-    
-    NSLog(@"中心点坐标为:%f,%f,%f",(xMax-xMin)/2+xMin,(yMax-yMin)/2+yMin,(zMax-zMin)/2+zMin);
+//    NSLog(@"xyz最小：%f,%f,%f",xMin,yMin,zMin);
+//    NSLog(@"xyz最大：%f,%f,%f",xMax,yMax,zMax);
+//    
+//    NSLog(@"中心点坐标为:%f,%f,%f",(xMax-xMin)/2+xMin,(yMax-yMin)/2+yMin,(zMax-zMin)/2+zMin);
     
     
     
@@ -739,7 +739,7 @@ struct pointInfo
         diameter = zMax-zMin;
     }
     
-    NSLog(@"最长的长径：%f",diameter);
+//    NSLog(@"最长的长径：%f",diameter);
     
     //算出一个合适的比例展示模型 最大直径 控制到2.0
     float bili = 2.0/diameter;

@@ -16,6 +16,7 @@
 		2879CEC51D13ACA000AD7F60 /* CSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CEC41D13ACA000AD7F60 /* CSBaseViewController.m */; };
 		2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CEC71D13D4E300AD7F60 /* CSTabBarController.m */; };
 		2879CECB1D13D4F400AD7F60 /* CSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */; };
+		3044E20B1D82689C004888BB /* placeholde.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3044E20A1D82689C004888BB /* placeholde.jpg */; };
 		30B18F031D814BFA00366EA3 /* CSShellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F021D814BFA00366EA3 /* CSShellViewController.m */; };
 		30B18F061D814E9900366EA3 /* CSGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F051D814E9900366EA3 /* CSGLView.m */; };
 		30B18F1F1D814F1700366EA3 /* ksMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F191D814F1700366EA3 /* ksMatrix.c */; };
@@ -87,6 +88,7 @@
 		2879CEC71D13D4E300AD7F60 /* CSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTabBarController.m; sourceTree = "<group>"; };
 		2879CEC91D13D4F400AD7F60 /* CSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHomeViewController.h; sourceTree = "<group>"; };
 		2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHomeViewController.m; sourceTree = "<group>"; };
+		3044E20A1D82689C004888BB /* placeholde.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholde.jpg; sourceTree = "<group>"; };
 		30B18F011D814BFA00366EA3 /* CSShellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSShellViewController.h; sourceTree = "<group>"; };
 		30B18F021D814BFA00366EA3 /* CSShellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSShellViewController.m; sourceTree = "<group>"; };
 		30B18F041D814E9900366EA3 /* CSGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGLView.h; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				30B18F2E1D8178C500366EA3 /* Dota1.stl */,
 				30B18F2F1D8178C500366EA3 /* Garrosh Hellscream1.stl */,
 				30B18F301D8178C500366EA3 /* Grommash Hellscream1.stl */,
+				3044E20A1D82689C004888BB /* placeholde.jpg */,
 				2879CE881D13ABDC00AD7F60 /* Supporting Files */,
 			);
 			path = CustomShell;
@@ -480,6 +483,7 @@
 				2879CE951D13ABDC00AD7F60 /* Assets.xcassets in Resources */,
 				30B18F251D81545600366EA3 /* FragmentShader.glsl in Resources */,
 				30B18F351D8178C500366EA3 /* Grommash Hellscream1.stl in Resources */,
+				3044E20B1D82689C004888BB /* placeholde.jpg in Resources */,
 				30B18F331D8178C500366EA3 /* Dota1.stl in Resources */,
 				30B18F231D8153F300366EA3 /* VertexShader.glsl in Resources */,
 				30B18F341D8178C500366EA3 /* Garrosh Hellscream1.stl in Resources */,

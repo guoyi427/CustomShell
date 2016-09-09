@@ -24,7 +24,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor whiteColor];
         _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        _imageView.backgroundColor = [UIColor yellowColor];
         [self.contentView addSubview:_imageView];
     }
     return self;
@@ -33,7 +35,7 @@
 #pragma mark - Public Methods
 
 - (void)updateModel:(CSHomeModel *)model {
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:model.imageURL]];
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage imageNamed:@"placeholde.jpg"]];
 }
 
 @end

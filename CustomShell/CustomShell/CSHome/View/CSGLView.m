@@ -194,6 +194,9 @@ struct STL_VertexInfo {
 }
 
 - (void)_prepareStlWithPath:(NSString *)path {
+    if (_faceCount && _stlPath) {
+        return;
+    }
     _stlPath = path;
     NSValue *stlValue = [ZLCStlparser ParserStlFileWithfilaPath:path];
     struct STL_VertexInfo info;
