@@ -10,4 +10,13 @@
 
 @implementation CSHomeModel
 
++ (instancetype)modelWithDic:(NSDictionary *)dic {
+    CSHomeModel *model = [[CSHomeModel alloc] init];
+    model.name = dic[@"name"];
+    model.stlID = [dic[@"id"] integerValue];
+    model.imageURL = dic[@"imageURL"];
+    model.pathList = dic[@"stlURL"];
+    return model;
+}
+
 @end

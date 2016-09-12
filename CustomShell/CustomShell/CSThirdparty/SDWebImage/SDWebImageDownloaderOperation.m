@@ -278,8 +278,8 @@
 
             if (partialImageRef) {
                 UIImage *image = [UIImage imageWithCGImage:partialImageRef scale:1 orientation:orientation];
-                NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:self.request.URL];
-                UIImage *scaledImage = [self scaledImageForKey:key image:image];
+//                NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:self.request.URL];
+//                UIImage *scaledImage = [self scaledImageForKey:key image:image];
 //                image = [UIImage decodedImageWithImage:scaledImage];
                 CGImageRelease(partialImageRef);
                 dispatch_main_sync_safe(^{

@@ -11,7 +11,10 @@
 @interface CSHomeModel : NSObject
 
 @property (nonatomic, strong) NSString *imageURL;
-@property (nonatomic, strong) NSString *path;
+@property (nonatomic, strong) NSArray *pathList;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, assign) NSInteger stlID;
+
++ (instancetype)modelWithDic:(NSDictionary *)dic;
 
 @end
