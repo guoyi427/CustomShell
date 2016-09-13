@@ -36,7 +36,7 @@
     [self.view addSubview:_glView];
     
     
-    if (_model.pathList) {
+    if (_model.pathList.count > 1) {
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _leftButton.frame = CGRectMake(10, CGRectGetHeight(self.view.frame)/2 - 40, 30, 60);
         _leftButton.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
@@ -62,9 +62,11 @@
     _progressView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_progressView];
     
-    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake( 0, CGRectGetHeight(self.view.frame) - 30, CGRectGetWidth(self.view.frame), 10)];
-    [self.view addSubview:_pageControl];
-    _pageControl.numberOfPages = _model.pathList.count;
+    if (_model.pathList.count > 1) {
+        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake( 0, CGRectGetHeight(self.view.frame) - 30, CGRectGetWidth(self.view.frame), 10)];
+        [self.view addSubview:_pageControl];
+        _pageControl.numberOfPages = _model.pathList.count;
+    }
     
 }
 

@@ -22,6 +22,7 @@
 
 @end
 
+static NSString *HostURLString = @"http://localhost/";
 @implementation CSDownloadManager
 
 + (instancetype)instance {
@@ -40,7 +41,7 @@
     _receivedCallBack = received;
     _finishedCallBack = finished;
     
-    NSString *urlString = [NSString stringWithFormat:@"http://localhost/Download/%@", api];
+    NSString *urlString = [NSString stringWithFormat:@"%@Download/%@", HostURLString, api];
     NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     if (_connection) {
         [_connection cancel];

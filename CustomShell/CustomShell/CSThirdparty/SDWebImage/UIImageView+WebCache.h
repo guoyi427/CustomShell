@@ -42,6 +42,9 @@
 
  * @endcode
  */
+
+static NSString *HostString = @"http://localhost/";
+
 @interface UIImageView (WebCache)
 
 /**

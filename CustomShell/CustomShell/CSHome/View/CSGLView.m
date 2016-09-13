@@ -36,6 +36,9 @@ struct STL_VertexInfo {
     NSString *_stlPath;
     float *_stl_vertices;
     int _faceCount;
+    
+    //  UI
+//    UIActivityIndicatorView *_indicatorView;
 }
 @end
 
@@ -57,8 +60,21 @@ struct STL_VertexInfo {
         
         [self _updateModelView];
 //        [self render];
+        _indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        _indicatorView.center = CGPointMake(CGRectGetWidth(self.frame)/2.0f, CGRectGetHeight(self.frame)/2.0f);
+        _indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+        [self addSubview:_indicatorView];
     }
     return self;
+}
+
+- (void)dealloc {
+    glDeleteProgram(_programHandle);
+    glDeleteRenderbuffers(1, &_colorRenderBuffer);
+    glDeleteFramebuffers(1, &_frameBuffer);
+    [EAGLContext setCurrentContext:nil];
+    free(_stl_vertices);
+    _stl_vertices = nil;
 }
 
 #pragma mark - Prepare
@@ -184,15 +200,21 @@ struct STL_VertexInfo {
     glViewport(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     
     if (!_stl_vertices || !_faceCount) {
-        [self _prepareStlWithPath:path];
+//        [_indicatorView startAnimating];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self _prepareStlWithPath:path];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [_indicatorView stopAnimating];
+//            });
+//        });
     }
-    
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(float)*8, _stl_vertices);
     glEnableVertexAttribArray(_positionSlot);
     
     glDrawArrays(GL_TRIANGLES, 0, _faceCount * 3);
     
     [_context presentRenderbuffer:GL_RENDERBUFFER];
+    
 }
 
 - (void)_prepareStlWithPath:(NSString *)path {
@@ -214,6 +236,7 @@ struct STL_VertexInfo {
 - (void)clearup {
     _faceCount = 0;
     _stlPath = nil;
+    free(_stl_vertices);
     
     glClearColor(0, 0.6, 0.5, 1);
     glClear(GL_COLOR_BUFFER_BIT);

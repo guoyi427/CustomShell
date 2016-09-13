@@ -35,7 +35,8 @@
 #pragma mark - Public Methods
 
 - (void)updateModel:(CSHomeModel *)model {
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage imageNamed:@"placeholde.jpg"]];
+    NSString *picURLStirng = [NSString stringWithFormat:@"%@Download/%@", HostString, model.imageURL];
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:picURLStirng] placeholderImage:[UIImage imageNamed:@"placeholde.jpg"]];
 }
 
 @end
