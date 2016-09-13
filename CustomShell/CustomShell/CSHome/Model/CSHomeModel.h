@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSArray *pathList;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) NSInteger stlID;
+/// 网络地址和本地路径映射表 key 网络路径   value 本地路径
+@property (nonatomic, strong) NSMutableDictionary *filePathDic;
 
 + (instancetype)modelWithDic:(NSDictionary *)dic;
 

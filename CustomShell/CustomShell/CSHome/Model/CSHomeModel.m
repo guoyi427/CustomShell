@@ -16,6 +16,7 @@
     model.stlID = [dic[@"id"] integerValue];
     model.imageURL = dic[@"imageURL"];
     model.pathList = dic[@"stlURL"];
+    model.filePathDic = [[NSMutableDictionary alloc] init];
     return model;
 }
 

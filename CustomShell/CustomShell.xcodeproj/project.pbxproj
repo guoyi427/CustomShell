@@ -49,6 +49,8 @@
 		30B18F6C1D817B8F00366EA3 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F5A1D817B8F00366EA3 /* UIImageView+HighlightedWebCache.m */; };
 		30B18F6D1D817B8F00366EA3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F5C1D817B8F00366EA3 /* UIImageView+WebCache.m */; };
 		30B18F6E1D817B8F00366EA3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F5E1D817B8F00366EA3 /* UIView+WebCacheOperation.m */; };
+		30EF57201D87E44100F67C6C /* CSDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF571F1D87E44100F67C6C /* CSDownloadManager.m */; };
+		30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF57221D87FCAB00F67C6C /* NSString+MD5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,10 @@
 		30B18F5C1D817B8F00366EA3 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		30B18F5D1D817B8F00366EA3 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		30B18F5E1D817B8F00366EA3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		30EF571E1D87E44100F67C6C /* CSDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDownloadManager.h; sourceTree = "<group>"; };
+		30EF571F1D87E44100F67C6C /* CSDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDownloadManager.m; sourceTree = "<group>"; };
+		30EF57211D87FCAB00F67C6C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		30EF57221D87FCAB00F67C6C /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +307,10 @@
 		2879CEC11D13AC1000AD7F60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30B18F391D817A0700366EA3 /* CSHomeModel.h */,
+				30B18F3A1D817A0700366EA3 /* CSHomeModel.m */,
+				30EF571E1D87E44100F67C6C /* CSDownloadManager.h */,
+				30EF571F1D87E44100F67C6C /* CSDownloadManager.m */,
 				30B18F191D814F1700366EA3 /* ksMatrix.c */,
 				30B18F1A1D814F1700366EA3 /* ksMatrix.h */,
 				30B18F1B1D814F1700366EA3 /* ksVector.c */,
@@ -309,8 +319,8 @@
 				30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */,
 				30B18F221D8153F300366EA3 /* VertexShader.glsl */,
 				30B18F241D81545600366EA3 /* FragmentShader.glsl */,
-				30B18F391D817A0700366EA3 /* CSHomeModel.h */,
-				30B18F3A1D817A0700366EA3 /* CSHomeModel.m */,
+				30EF57211D87FCAB00F67C6C /* NSString+MD5.h */,
+				30EF57221D87FCAB00F67C6C /* NSString+MD5.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -525,6 +535,7 @@
 				30B18F3B1D817A0700366EA3 /* CSHomeModel.m in Sources */,
 				30B18F631D817B8F00366EA3 /* SDWebImageDecoder.m in Sources */,
 				2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */,
+				30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */,
 				30B18F6C1D817B8F00366EA3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				30B18F381D8179D100366EA3 /* CSHomeCollectionViewCell.m in Sources */,
 				30B18F641D817B8F00366EA3 /* SDWebImageDownloader.m in Sources */,
@@ -534,6 +545,7 @@
 				30B18F6A1D817B8F00366EA3 /* UIImage+MultiFormat.m in Sources */,
 				30B18F211D814F1700366EA3 /* ZLCStlparser.mm in Sources */,
 				30B18F671D817B8F00366EA3 /* SDWebImagePrefetcher.m in Sources */,
+				30EF57201D87E44100F67C6C /* CSDownloadManager.m in Sources */,
 				2879CE8D1D13ABDC00AD7F60 /* AppDelegate.m in Sources */,
 				30B18F5F1D817B8F00366EA3 /* MKAnnotationView+WebCache.m in Sources */,
 				30B18F6D1D817B8F00366EA3 /* UIImageView+WebCache.m in Sources */,

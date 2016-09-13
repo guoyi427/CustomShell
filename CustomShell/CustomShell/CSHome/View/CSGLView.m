@@ -33,10 +33,9 @@ struct STL_VertexInfo {
     CGPoint _rotatePoint;
     CGPoint _touchBeganPoint;
     
-    NSString *_stlString;
+    NSString *_stlPath;
     float *_stl_vertices;
     int _faceCount;
-    NSMutableData *_stlData;
 }
 @end
 
@@ -178,56 +177,28 @@ struct STL_VertexInfo {
     glUniformMatrix4fv(_modelViewSlot, 1, GL_FALSE, &_modelViewMatrix.m[0][0]);
 }
 
-- (void)renderStlWithURL:(NSString *)url{
+- (void)renderStlWithPath:(NSString *)path {
     glClearColor(0, 0.6, 0.5, 1);
     glClear(GL_COLOR_BUFFER_BIT);
     
     glViewport(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     
-    [self _prepareStlWithUrl:url];
-    
-    glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(float)*8, _stl_vertices);
-    glEnableVertexAttribArray(_positionSlot);
-    
-    glDrawArrays(GL_TRIANGLES, 0, _faceCount * 3);
-    
-    [_context presentRenderbuffer:GL_RENDERBUFFER];
-}
-
-- (void)renderStlWithString:(NSString *)string {
-    glClearColor(0, 0.6, 0.5, 1);
-    glClear(GL_COLOR_BUFFER_BIT);
-    
-    glViewport(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
-    
-    [self _prepareStlWithString:string];
-    
-    glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(float)*8, _stl_vertices);
-    glEnableVertexAttribArray(_positionSlot);
-    
-    glDrawArrays(GL_TRIANGLES, 0, _faceCount * 3);
-    
-    [_context presentRenderbuffer:GL_RENDERBUFFER];
-}
-
-- (void)_prepareStlWithUrl:(NSString *)url {
-    if (_faceCount && _stlString) {
-        return;
+    if (!_stl_vertices || !_faceCount) {
+        [self _prepareStlWithPath:path];
     }
     
-    UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    indicatorView.frame = CGRectMake(0, 64, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - 64);
-    [self addSubview:indicatorView];
-    [indicatorView startAnimating];
+    glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(float)*8, _stl_vertices);
+    glEnableVertexAttribArray(_positionSlot);
     
-    NSURLRequest *downloadReq = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-    NSURLConnection *connection = [NSURLConnection connectionWithRequest:downloadReq delegate:self];
-    [connection start];
+    glDrawArrays(GL_TRIANGLES, 0, _faceCount * 3);
     
+    [_context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
-- (void)_prepareStlWithString:(NSString *)string {
-    NSValue *stlValue = [ZLCStlparser ParserStlFileWithfilaPath:string];
+- (void)_prepareStlWithPath:(NSString *)path {
+    
+    _stlPath = path;
+    NSValue *stlValue = [ZLCStlparser ParserStlFileWithfilaPath:path];
     struct STL_VertexInfo info;
     [stlValue getValue:&info];
     
@@ -242,7 +213,11 @@ struct STL_VertexInfo {
 
 - (void)clearup {
     _faceCount = 0;
-    _stlString = nil;
+    _stlPath = nil;
+    
+    glClearColor(0, 0.6, 0.5, 1);
+    glClear(GL_COLOR_BUFFER_BIT);
+    [_context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
 #pragma mark - Touch Delegate
@@ -256,67 +231,7 @@ struct STL_VertexInfo {
     _rotatePoint = CGPointMake(point.x - _touchBeganPoint.x, point.y - _touchBeganPoint.y);
     
     [self _updateModelView];
-    [self renderStlWithString:_stlString];
+    [self renderStlWithPath:_stlPath];
 }
-
-#pragma mark - Connection - Delegate
-
--(void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse*)response
-
-{//该方法在响应connection时调用
-    
-    NSLog(@"response");
-    _stlData = [[NSMutableData alloc] init];
-//    self.data=[[NSMutableData alloc]init];
-    
-//    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
-    
-//    if(httpResponse&&[httpResponse respondsToSelector:@selector(allHeaderFields)]){
-//        
-//        NSDictionary *httpResponseHeaderFields = [httpResponse allHeaderFields];
-//        
-//        mFileSize=[[httpResponseHeaderFields objectForKey:@"Content-Length"]longLongValue];
-//        
-//    }//获取文件文件的大小
-    
-}
-
--(void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error
-
-{//出错时调用
-    
-    NSLog(@"error");
-    
-}
-
--(void)connection:(NSURLConnection*)connection didReceiveData:(NSData*)data
-
-{//接受数据，在接受完成之前，该方法重复调用
-    
-    NSLog(@"receive");
-    
-    [_stlData appendData:data];
-    
-//    _displayLabel.text=[NSStringstringWithFormat:(@"%6.1fkb/%6.1fkb"),[_datalength]/1024.0,mFileSize/1024.0];
-    
-//    [_progressViewsetProgress:[_datalength]/(float)mFileSize];
-    
-}
-
--(void)connectionDidFinishLoading:(NSURLConnection*)connection
-
-{//完成时调用
-    
-    NSLog(@"Finish");
-    /*
-    NSString*filePath=[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES)objectAtIndex:0]stringByAppendingPathComponent:@"android.mp4"];
-    
-    [_data writeToFile:filePathatomically:NO];//将数据写入Documents目录。
-    
-    NSLog(@"%@",filePath);
-    */
-}
-
-
 
 @end

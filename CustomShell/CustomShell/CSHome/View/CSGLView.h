@@ -10,7 +10,7 @@
 
 @interface CSGLView : UIView
 
-- (void)renderStlWithURL:(NSString *)url;
+- (void)renderStlWithPath:(NSString *)path;
 
 - (void)clearup;
 
