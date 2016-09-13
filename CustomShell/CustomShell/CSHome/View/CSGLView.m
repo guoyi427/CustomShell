@@ -36,9 +36,6 @@ struct STL_VertexInfo {
     NSString *_stlPath;
     float *_stl_vertices;
     int _faceCount;
-    
-    //  UI
-//    UIActivityIndicatorView *_indicatorView;
 }
 @end
 
@@ -60,10 +57,6 @@ struct STL_VertexInfo {
         
         [self _updateModelView];
 //        [self render];
-        _indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-        _indicatorView.center = CGPointMake(CGRectGetWidth(self.frame)/2.0f, CGRectGetHeight(self.frame)/2.0f);
-        _indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-        [self addSubview:_indicatorView];
     }
     return self;
 }
@@ -200,13 +193,7 @@ struct STL_VertexInfo {
     glViewport(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     
     if (!_stl_vertices || !_faceCount) {
-//        [_indicatorView startAnimating];
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [self _prepareStlWithPath:path];
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [_indicatorView stopAnimating];
-//            });
-//        });
+        [self _prepareStlWithPath:path];
     }
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(float)*8, _stl_vertices);
     glEnableVertexAttribArray(_positionSlot);

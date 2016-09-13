@@ -24,13 +24,7 @@
 		30B18F211D814F1700366EA3 /* ZLCStlparser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */; };
 		30B18F231D8153F300366EA3 /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F221D8153F300366EA3 /* VertexShader.glsl */; };
 		30B18F251D81545600366EA3 /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F241D81545600366EA3 /* FragmentShader.glsl */; };
-		30B18F291D81708E00366EA3 /* DLAM.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F281D81708E00366EA3 /* DLAM.stl */; };
 		30B18F2B1D81713900366EA3 /* myStl.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F2A1D81713900366EA3 /* myStl.stl */; };
-		30B18F311D8178C500366EA3 /* 三角恐龙1.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F2C1D8178C500366EA3 /* 三角恐龙1.stl */; };
-		30B18F321D8178C500366EA3 /* 战斗的鳄鱼1.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F2D1D8178C500366EA3 /* 战斗的鳄鱼1.stl */; };
-		30B18F331D8178C500366EA3 /* Dota1.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F2E1D8178C500366EA3 /* Dota1.stl */; };
-		30B18F341D8178C500366EA3 /* Garrosh Hellscream1.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F2F1D8178C500366EA3 /* Garrosh Hellscream1.stl */; };
-		30B18F351D8178C500366EA3 /* Grommash Hellscream1.stl in Resources */ = {isa = PBXBuildFile; fileRef = 30B18F301D8178C500366EA3 /* Grommash Hellscream1.stl */; };
 		30B18F381D8179D100366EA3 /* CSHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F371D8179D100366EA3 /* CSHomeCollectionViewCell.m */; };
 		30B18F3B1D817A0700366EA3 /* CSHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F3A1D817A0700366EA3 /* CSHomeModel.m */; };
 		30B18F5F1D817B8F00366EA3 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F3F1D817B8F00366EA3 /* MKAnnotationView+WebCache.m */; };
@@ -103,13 +97,7 @@
 		30B18F1E1D814F1700366EA3 /* ZLCStlparser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZLCStlparser.mm; sourceTree = "<group>"; };
 		30B18F221D8153F300366EA3 /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
 		30B18F241D81545600366EA3 /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
-		30B18F281D81708E00366EA3 /* DLAM.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = DLAM.stl; sourceTree = "<group>"; };
 		30B18F2A1D81713900366EA3 /* myStl.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = myStl.stl; sourceTree = "<group>"; };
-		30B18F2C1D8178C500366EA3 /* 三角恐龙1.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "三角恐龙1.stl"; sourceTree = "<group>"; };
-		30B18F2D1D8178C500366EA3 /* 战斗的鳄鱼1.stl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "战斗的鳄鱼1.stl"; sourceTree = "<group>"; };
-		30B18F2E1D8178C500366EA3 /* Dota1.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dota1.stl; sourceTree = "<group>"; };
-		30B18F2F1D8178C500366EA3 /* Garrosh Hellscream1.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Garrosh Hellscream1.stl"; sourceTree = "<group>"; };
-		30B18F301D8178C500366EA3 /* Grommash Hellscream1.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grommash Hellscream1.stl"; sourceTree = "<group>"; };
 		30B18F361D8179D100366EA3 /* CSHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		30B18F371D8179D100366EA3 /* CSHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		30B18F391D817A0700366EA3 /* CSHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHomeModel.h; sourceTree = "<group>"; };
@@ -210,12 +198,6 @@
 				2879CE961D13ABDC00AD7F60 /* LaunchScreen.storyboard */,
 				2879CE991D13ABDC00AD7F60 /* Info.plist */,
 				30B18F2A1D81713900366EA3 /* myStl.stl */,
-				30B18F281D81708E00366EA3 /* DLAM.stl */,
-				30B18F2C1D8178C500366EA3 /* 三角恐龙1.stl */,
-				30B18F2D1D8178C500366EA3 /* 战斗的鳄鱼1.stl */,
-				30B18F2E1D8178C500366EA3 /* Dota1.stl */,
-				30B18F2F1D8178C500366EA3 /* Garrosh Hellscream1.stl */,
-				30B18F301D8178C500366EA3 /* Grommash Hellscream1.stl */,
 				3044E20A1D82689C004888BB /* placeholde.jpg */,
 				2879CE881D13ABDC00AD7F60 /* Supporting Files */,
 			);
@@ -487,18 +469,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B18F291D81708E00366EA3 /* DLAM.stl in Resources */,
-				30B18F311D8178C500366EA3 /* 三角恐龙1.stl in Resources */,
 				2879CE981D13ABDC00AD7F60 /* LaunchScreen.storyboard in Resources */,
 				2879CE951D13ABDC00AD7F60 /* Assets.xcassets in Resources */,
 				30B18F251D81545600366EA3 /* FragmentShader.glsl in Resources */,
-				30B18F351D8178C500366EA3 /* Grommash Hellscream1.stl in Resources */,
 				3044E20B1D82689C004888BB /* placeholde.jpg in Resources */,
-				30B18F331D8178C500366EA3 /* Dota1.stl in Resources */,
 				30B18F231D8153F300366EA3 /* VertexShader.glsl in Resources */,
-				30B18F341D8178C500366EA3 /* Garrosh Hellscream1.stl in Resources */,
 				30B18F2B1D81713900366EA3 /* myStl.stl in Resources */,
-				30B18F321D8178C500366EA3 /* 战斗的鳄鱼1.stl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,11 +663,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CustomShell/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoyi.CustomShell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -699,11 +678,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CustomShell/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoyi.CustomShell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

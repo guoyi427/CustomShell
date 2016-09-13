@@ -15,6 +15,7 @@
 #import "CSHomeCollectionViewCell.h"
 
 //  Model
+#import "CSDownloadManager.h"
 #import "CSHomeModel.h"
 
 @interface CSHomeViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
@@ -48,11 +49,15 @@
     } else {
         [_modelList removeAllObjects];
     }
-    
-    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost/guoyi.php"]];
+    NSString *apiString = [NSString stringWithFormat:@"%@guoyi.php", HostURLString];
+    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:apiString]];
     [NSURLConnection sendAsynchronousRequest:req
                                        queue:[[NSOperationQueue alloc] init]
                            completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+                               if (!data) {
+                                   NSLog(@"Error: result Data Null");
+                                   return;
+                               }
                                NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                                NSLog(@"result = %@", result);
                                if ([result[@"code"] integerValue] == 200) {

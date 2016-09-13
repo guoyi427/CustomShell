@@ -22,7 +22,6 @@
 
 @end
 
-static NSString *HostURLString = @"http://localhost/";
 @implementation CSDownloadManager
 
 + (instancetype)instance {

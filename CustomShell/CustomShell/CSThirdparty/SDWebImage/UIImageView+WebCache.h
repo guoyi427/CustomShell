@@ -8,6 +8,7 @@
 
 #import "SDWebImageCompat.h"
 #import "SDWebImageManager.h"
+#import "CSDownloadManager.h"
 
 /**
  * Integrates SDWebImage async downloading and caching of remote images with UIImageView.
@@ -42,8 +43,6 @@
 
  * @endcode
  */
-
-static NSString *HostString = @"http://localhost/";
 
 @interface UIImageView (WebCache)
 
