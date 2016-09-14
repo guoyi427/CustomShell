@@ -23,13 +23,31 @@ struct STL_VertexInfo {
     CAEAGLLayer *_eaglLayer;
     EAGLContext *_context;
     GLuint _colorRenderBuffer;
+    GLuint _depthRenderBuffer;
     GLuint _frameBuffer;
+    
     GLuint _programHandle;
     GLuint _positionSlot;
     GLuint _projectionSlot;
     GLuint _modelViewSlot;
+    GLuint _normalMatrixSlot;
+    GLuint _lightPositionSlot;
+    
+    GLint _normalSlot;
+    GLint _ambientSlot;
+    GLint _diffuseSlot;
+    GLint _specularSlot;
+    GLint _shininessSlot;
+    
     ksMatrix4 _projectionMatrix;
     ksMatrix4 _modelViewMatrix;
+    
+    ksVec3 _lightPosition;
+    ksColor _ambient;
+    ksColor _diffuse;
+    ksColor _specular;
+    GLfloat _shininess;
+    
     CGPoint _rotatePoint;
     CGPoint _touchBeganPoint;
     
@@ -53,6 +71,7 @@ struct STL_VertexInfo {
         [self _prepareContext];
         [self _prepareBuffers];
         [self _prepareProgram];
+        [self _prepareLights];
         [self _prepareProjection];
         
         [self _updateModelView];
@@ -91,10 +110,23 @@ struct STL_VertexInfo {
     glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
     [_context renderbufferStorage:GL_RENDERBUFFER fromDrawable:_eaglLayer];
     
+    int width, height;
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &width);
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &height);
+    
+    glGenRenderbuffers(1, &_depthRenderBuffer);
+    glBindRenderbuffer(GL_RENDERBUFFER, _depthRenderBuffer);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, width, height);
+    
     glGenFramebuffers(1, &_frameBuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,
                               GL_RENDERBUFFER, _colorRenderBuffer);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT,
+                              GL_RENDERBUFFER, _depthRenderBuffer);
+    
+    //  set color render buffer as current render buffer
+    glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
 }
 
 - (void)_prepareProgram {
@@ -132,6 +164,14 @@ struct STL_VertexInfo {
     _positionSlot = glGetAttribLocation(_programHandle, "position");
     _projectionSlot = glGetUniformLocation(_programHandle, "projection");
     _modelViewSlot = glGetUniformLocation(_programHandle, "modelView");
+    _normalMatrixSlot = glGetUniformLocation(_programHandle, "normalMatrix");
+    _lightPositionSlot = glGetUniformLocation(_programHandle, "vLightPosition");
+    _ambientSlot = glGetUniformLocation(_programHandle, "vAmbientMaterial");
+    _specularSlot = glGetUniformLocation(_programHandle, "vSpecularMaterial");
+    _shininessSlot = glGetUniformLocation(_programHandle, "shininess");
+    
+    _normalSlot = glGetAttribLocation(_programHandle, "vNormal");
+    _diffuseSlot = glGetAttribLocation(_programHandle, "vDiffuseMaterial");
     
     glUseProgram(_programHandle);
 }
@@ -169,12 +209,36 @@ struct STL_VertexInfo {
     return shaderHandle;
 }
 
+- (void)_prepareLights {
+    glEnableVertexAttribArray(_positionSlot);
+    glEnableVertexAttribArray(_normalSlot);
+    
+    _lightPosition.x = _lightPosition.y = _lightPosition.z = 1.0;
+    
+    _ambient.r = _ambient.g = _ambient.b = 0.04;
+    _specular.r = _specular.g = _specular.b = 0.5;
+    _diffuse.r = 0.5;
+    _diffuse.g = 0.5;
+    _diffuse.b = 0.0;
+    
+    _shininess = 10;
+}
+
+- (void)_updateLights {
+    glUniform3f(_lightPositionSlot, _lightPosition.x, _lightPosition.y, _lightPosition.z);
+    glUniform4f(_ambientSlot, _ambient.r, _ambient.g, _ambient.b, _ambient.a);
+    glUniform4f(_specularSlot, _specular.r, _specular.g, _specular.b, _specular.a);
+    glVertexAttrib4f(_diffuseSlot, _diffuse.r, _diffuse.g, _diffuse.b, _diffuse.a);
+    glUniform1f(_shininessSlot, _shininess);
+}
+
 - (void)_prepareProjection {
     ksMatrixLoadIdentity(&_projectionMatrix);
     ksPerspective(&_projectionMatrix, 60, CGRectGetWidth(self.frame)/CGRectGetHeight(self.frame), 1, 20);
     
     glUniformMatrix4fv(_projectionSlot, 1, GL_FALSE, &_projectionMatrix.m[0][0]);
     glEnable(GL_CULL_FACE);
+    glEnable(GL_DEPTH_TEST);
 }
 
 - (void)_updateModelView {
@@ -184,19 +248,29 @@ struct STL_VertexInfo {
     ksMatrixRotate(&_modelViewMatrix, _rotatePoint.y, -1, 0, 0);
     
     glUniformMatrix4fv(_modelViewSlot, 1, GL_FALSE, &_modelViewMatrix.m[0][0]);
+    
+    //  更新法线
+    ksMatrix3 normalMatrix3;
+    ksMatrix4ToMatrix3(&normalMatrix3, &_modelViewMatrix);
+    glUniformMatrix3fv(_normalMatrixSlot, 1, GL_FALSE, &normalMatrix3.m[0][0]);
+    [self _updateLights];
 }
 
 - (void)renderStlWithPath:(NSString *)path {
     glClearColor(0, 0.6, 0.5, 1);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     
     glViewport(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     
     if (!_stl_vertices || !_faceCount) {
         [self _prepareStlWithPath:path];
     }
+    
+    
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(float)*8, _stl_vertices);
     glEnableVertexAttribArray(_positionSlot);
+//    const GLvoid* normalOffset = (const GLvoid*)(3*sizeof(GLfloat));
+    glVertexAttribPointer(_normalSlot, 3, GL_FLOAT, GL_FALSE, sizeof(float)*8, _stl_vertices + 3);
     
     glDrawArrays(GL_TRIANGLES, 0, _faceCount * 3);
     
@@ -223,7 +297,9 @@ struct STL_VertexInfo {
 - (void)clearup {
     _faceCount = 0;
     _stlPath = nil;
-    free(_stl_vertices);
+    if (_stl_vertices) {
+        free(_stl_vertices);
+    }
     
     glClearColor(0, 0.6, 0.5, 1);
     glClear(GL_COLOR_BUFFER_BIT);
