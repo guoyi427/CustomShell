@@ -43,6 +43,7 @@
 		30B18F6C1D817B8F00366EA3 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F5A1D817B8F00366EA3 /* UIImageView+HighlightedWebCache.m */; };
 		30B18F6D1D817B8F00366EA3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F5C1D817B8F00366EA3 /* UIImageView+WebCache.m */; };
 		30B18F6E1D817B8F00366EA3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F5E1D817B8F00366EA3 /* UIView+WebCacheOperation.m */; };
+		30C7D0141D8E35D700706121 /* CSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C7D0131D8E35D700706121 /* CSGameViewController.m */; };
 		30EF57201D87E44100F67C6C /* CSDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF571F1D87E44100F67C6C /* CSDownloadManager.m */; };
 		30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF57221D87FCAB00F67C6C /* NSString+MD5.m */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,8 @@
 		30B18F5C1D817B8F00366EA3 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		30B18F5D1D817B8F00366EA3 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		30B18F5E1D817B8F00366EA3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		30C7D0121D8E35D700706121 /* CSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGameViewController.h; sourceTree = "<group>"; };
+		30C7D0131D8E35D700706121 /* CSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSGameViewController.m; sourceTree = "<group>"; };
 		30EF571E1D87E44100F67C6C /* CSDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDownloadManager.h; sourceTree = "<group>"; };
 		30EF571F1D87E44100F67C6C /* CSDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDownloadManager.m; sourceTree = "<group>"; };
 		30EF57211D87FCAB00F67C6C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 			children = (
 				2879CEBB1D13AC1000AD7F60 /* CSBase */,
 				2879CEBF1D13AC1000AD7F60 /* CSHome */,
+				30C7D00E1D8E359B00706121 /* CSGame */,
 				30B18F3C1D817B6B00366EA3 /* CSThirdparty */,
 				2879CE8B1D13ABDC00AD7F60 /* AppDelegate.h */,
 				2879CE8C1D13ABDC00AD7F60 /* AppDelegate.m */,
@@ -366,6 +370,39 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		30C7D00E1D8E359B00706121 /* CSGame */ = {
+			isa = PBXGroup;
+			children = (
+				30C7D00F1D8E359B00706121 /* Controller */,
+				30C7D0101D8E359B00706121 /* Model */,
+				30C7D0111D8E359B00706121 /* View */,
+			);
+			path = CSGame;
+			sourceTree = "<group>";
+		};
+		30C7D00F1D8E359B00706121 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30C7D0121D8E35D700706121 /* CSGameViewController.h */,
+				30C7D0131D8E35D700706121 /* CSGameViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		30C7D0101D8E359B00706121 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30C7D0111D8E359B00706121 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -433,6 +470,7 @@
 				TargetAttributes = {
 					2879CE841D13ABDC00AD7F60 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7H22EA3T35;
 					};
 					2879CE9D1D13ABDC00AD7F60 = {
 						CreatedOnToolsVersion = 7.3;
@@ -504,6 +542,7 @@
 				30B18F6B1D817B8F00366EA3 /* UIImage+WebP.m in Sources */,
 				2879CEC51D13ACA000AD7F60 /* CSBaseViewController.m in Sources */,
 				30B18F681D817B8F00366EA3 /* UIButton+WebCache.m in Sources */,
+				30C7D0141D8E35D700706121 /* CSGameViewController.m in Sources */,
 				30B18F651D817B8F00366EA3 /* SDWebImageDownloaderOperation.m in Sources */,
 				30B18F201D814F1700366EA3 /* ksVector.c in Sources */,
 				30B18F611D817B8F00366EA3 /* SDImageCache.m in Sources */,
@@ -665,6 +704,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7H22EA3T35;
 				INFOPLIST_FILE = CustomShell/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -680,6 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7H22EA3T35;
 				INFOPLIST_FILE = CustomShell/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -9,6 +9,7 @@
 #import "CSTabBarController.h"
 
 #import "CSHomeViewController.h"
+#import "CSGameViewController.h"
 
 @interface CSTabBarController ()
 
@@ -23,7 +24,11 @@
     homeVC.title = @"首页";
     UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:homeVC];
     
-    self.viewControllers = @[homeNavi];
+    CSGameViewController *gameVC = [[CSGameViewController alloc] init];
+    gameVC.title = @"游戏";
+    UINavigationController *gameNavi = [[UINavigationController alloc] initWithRootViewController:gameVC];
+    
+    self.viewControllers = @[homeNavi, gameNavi];
 }
 
 - (void)didReceiveMemoryWarning {
