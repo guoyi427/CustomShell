@@ -24,6 +24,7 @@
     
     //  Data
     NSMutableArray *_modelList;
+    NSOperationQueue *_requestQueue;
 }
 @end
 
@@ -33,7 +34,6 @@
     [super viewDidLoad];
     [self _prepareUI];
     [self _prepareData];
-   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,13 +46,16 @@
 - (void)_prepareData {
     if (!_modelList) {
         _modelList = [[NSMutableArray alloc] initWithCapacity:30];
-    } else {
-        [_modelList removeAllObjects];
     }
+    
+    if (!_requestQueue) {
+        _requestQueue = [[NSOperationQueue alloc] init];
+    }
+    
     NSString *apiString = [NSString stringWithFormat:@"%@guoyi.php", HostURLString];
     NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:apiString]];
     [NSURLConnection sendAsynchronousRequest:req
-                                       queue:[[NSOperationQueue alloc] init]
+                                       queue:_requestQueue
                            completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
                                if (!data) {
                                    NSLog(@"Error: result Data Null");
@@ -88,6 +91,20 @@
     _collectionView.dataSource = self;
     [_collectionView registerClass:[CSHomeCollectionViewCell class] forCellWithReuseIdentifier:@"stlCell"];
     [self.view addSubview:_collectionView];
+    
+    UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    refreshButton.frame = CGRectMake(CGRectGetWidth(self.view.frame) - 60, CGRectGetHeight(self.view.frame) - 100, 44, 44);
+    [refreshButton setTitle:@"刷新" forState:UIControlStateNormal];
+    [refreshButton addTarget:self action:@selector(refreshButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:refreshButton];
+}
+
+#pragma mark - Button - Action
+
+- (void)refreshButtonAction {
+    [_modelList removeAllObjects];
+    [_requestQueue cancelAllOperations];
+    [self _prepareData];
 }
 
 #pragma mark - CollectionView - Delegate & Datasources

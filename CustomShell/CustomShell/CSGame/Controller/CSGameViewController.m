@@ -24,8 +24,8 @@
     [super viewDidLoad];
     
     [self _prepareScene];
-    //[self _prepareOtherNode];
-    [self _prepareCubeNode];
+    [self _prepareOtherNode];
+//    [self _prepareCubeNode];
 }
 
 #pragma mark - Prepare
@@ -42,7 +42,7 @@
     lightNode.light = [SCNLight light];
     lightNode.light.type = SCNLightTypeOmni;
     lightNode.position = SCNVector3Make(10, 10, 10);
-    [_scene.rootNode addChildNode:lightNode];
+//    [_scene.rootNode addChildNode:lightNode];
     
     SCNNode *ambientLightNode = [SCNNode node];
     ambientLightNode.light = [SCNLight light];
@@ -54,7 +54,7 @@
     _gameView.scene = _scene;
     _gameView.backgroundColor = [UIColor blackColor];
     _gameView.showsStatistics = YES;
-    //view.allowsCameraControl = YES;
+    _gameView.allowsCameraControl = YES;
     [self.view addSubview:_gameView];
 }
 
@@ -98,7 +98,7 @@
 }
 
 #pragma mark - Touch - Delegate
-
+/*
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     _touchBeganPoint = [touches.anyObject locationInView:self.view];
 }
@@ -132,5 +132,5 @@
     }
     
 }
-
+*/
 @end

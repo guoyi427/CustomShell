@@ -32,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _glView = [[CSGLView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:_glView];
     
@@ -68,6 +69,13 @@
         _pageControl.numberOfPages = _model.pathList.count;
     }
     
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(0, 20, 44, 44);
+    [backButton setTitle:@"X" forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backButton];
+
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -80,6 +88,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
+}
+
+#pragma mark - Button - Action
+
+- (void)backButtonAction {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Private - Methods
