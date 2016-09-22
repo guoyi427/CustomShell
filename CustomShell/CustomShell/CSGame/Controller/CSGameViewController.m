@@ -24,6 +24,8 @@
     [super viewDidLoad];
     
     [self _prepareScene];
+    [self _prepareFloor];
+    [self _prepareWall];
     [self _prepareOtherNode];
 //    [self _prepareCubeNode];
 }
@@ -35,14 +37,15 @@
     
     SCNNode *cameraNode = [SCNNode node];
     cameraNode.camera = [SCNCamera camera];
-    cameraNode.position = SCNVector3Make(0, 0, 10);
+    cameraNode.position = SCNVector3Make(0, 1000, 1000);
+    cameraNode.camera.zFar = 4000;
     [_scene.rootNode addChildNode:cameraNode];
     
     SCNNode *lightNode = [SCNNode node];
     lightNode.light = [SCNLight light];
     lightNode.light.type = SCNLightTypeOmni;
-    lightNode.position = SCNVector3Make(10, 10, 10);
-//    [_scene.rootNode addChildNode:lightNode];
+    lightNode.position = SCNVector3Make(100, 100, 100);
+    [_scene.rootNode addChildNode:lightNode];
     
     SCNNode *ambientLightNode = [SCNNode node];
     ambientLightNode.light = [SCNLight light];
@@ -58,10 +61,58 @@
     [self.view addSubview:_gameView];
 }
 
+- (void)_prepareFloor {
+    SCNFloor *floor = [SCNFloor floor];
+    floor.reflectivity = 0;
+    
+    SCNNode *floorNode = [SCNNode nodeWithGeometry:floor];
+    [_scene.rootNode addChildNode:floorNode];
+    
+    SCNMaterial *material = [SCNMaterial material];
+    material.litPerPixel = NO;
+    material.diffuse.contents = [UIImage imageNamed:@"ground"];
+    material.diffuse.wrapS = SCNWrapModeRepeat;
+    material.diffuse.wrapT = SCNWrapModeRepeat;
+    
+    floor.materials = @[material];
+}
+
+- (void)_prepareWall {
+    
+    float height = 280;
+    float depth = 36;
+    
+    SCNBox *wall = [SCNBox boxWithWidth:808
+                                 height:height
+                                 length:depth
+                          chamferRadius:0];
+    SCNNode *wallNode = [SCNNode nodeWithGeometry:wall];
+    wallNode.position = SCNVector3Make(0, height/2.0, -1223/2.0+depth/2.0);
+    [_scene.rootNode addChildNode:wallNode];
+    
+    SCNBox *wall2 = [SCNBox boxWithWidth:depth
+                                  height:height
+                                  length:1223
+                           chamferRadius:0];
+    SCNNode *wall2Nodel = [SCNNode nodeWithGeometry:wall2];
+    wall2Nodel.position = SCNVector3Make(404-depth/2.0, height/2.0f, 0);
+    [_scene.rootNode addChildNode:wall2Nodel];
+    
+    SCNBox *wall3 = [SCNBox boxWithWidth:368
+                                    height:height
+                                    length:depth
+                             chamferRadius:0];
+    SCNNode *wall3Node = [SCNNode nodeWithGeometry:wall3];
+    wall3Node.position = SCNVector3Make(220, height/2.0, 1223/2.0-depth/2.0);
+    [_scene.rootNode addChildNode:wall3Node];
+    
+    
+}
+
 - (void)_prepareOtherNode {
     SCNSphere *sun = [SCNSphere sphereWithRadius:2];
     SCNNode *sunNode = [SCNNode nodeWithGeometry:sun];
-    sunNode.position = SCNVector3Make(0, 0, -20);
+    sunNode.position = SCNVector3Make(0, 100, 0);
     sunNode.geometry.firstMaterial.emission.contents = [UIColor redColor];
     [_scene.rootNode addChildNode:sunNode];
     
@@ -92,6 +143,7 @@
         boxNode.position = SCNVector3Make(i%3-1,
                                           i/3-i/9*3-1,
                                           -i/9+1);
+        
         [_scene.rootNode addChildNode:boxNode];
         NSLog(@"position = %f %f %f" ,boxNode.position.x, boxNode.position.y, boxNode.position.z);
     }

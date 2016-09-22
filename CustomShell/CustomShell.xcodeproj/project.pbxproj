@@ -17,6 +17,8 @@
 		2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CEC71D13D4E300AD7F60 /* CSTabBarController.m */; };
 		2879CECB1D13D4F400AD7F60 /* CSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */; };
 		3044E20B1D82689C004888BB /* placeholde.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3044E20A1D82689C004888BB /* placeholde.jpg */; };
+		30670DED1D927B8100A71D0E /* CSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30670DEC1D927B8100A71D0E /* CSMineViewController.m */; };
+		30670DF01D927B9F00A71D0E /* CSPrintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30670DEF1D927B9F00A71D0E /* CSPrintView.m */; };
 		30B18F031D814BFA00366EA3 /* CSShellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F021D814BFA00366EA3 /* CSShellViewController.m */; };
 		30B18F061D814E9900366EA3 /* CSGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F051D814E9900366EA3 /* CSGLView.m */; };
 		30B18F1F1D814F1700366EA3 /* ksMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F191D814F1700366EA3 /* ksMatrix.c */; };
@@ -86,6 +88,10 @@
 		2879CEC91D13D4F400AD7F60 /* CSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHomeViewController.h; sourceTree = "<group>"; };
 		2879CECA1D13D4F400AD7F60 /* CSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHomeViewController.m; sourceTree = "<group>"; };
 		3044E20A1D82689C004888BB /* placeholde.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholde.jpg; sourceTree = "<group>"; };
+		30670DEB1D927B8100A71D0E /* CSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMineViewController.h; sourceTree = "<group>"; };
+		30670DEC1D927B8100A71D0E /* CSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMineViewController.m; sourceTree = "<group>"; };
+		30670DEE1D927B9F00A71D0E /* CSPrintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPrintView.h; sourceTree = "<group>"; };
+		30670DEF1D927B9F00A71D0E /* CSPrintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPrintView.m; sourceTree = "<group>"; };
 		30B18F011D814BFA00366EA3 /* CSShellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSShellViewController.h; sourceTree = "<group>"; };
 		30B18F021D814BFA00366EA3 /* CSShellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSShellViewController.m; sourceTree = "<group>"; };
 		30B18F041D814E9900366EA3 /* CSGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGLView.h; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 				2879CEBB1D13AC1000AD7F60 /* CSBase */,
 				2879CEBF1D13AC1000AD7F60 /* CSHome */,
 				30C7D00E1D8E359B00706121 /* CSGame */,
+				30670DE71D927B5800A71D0E /* CSMine */,
 				30B18F3C1D817B6B00366EA3 /* CSThirdparty */,
 				2879CE8B1D13ABDC00AD7F60 /* AppDelegate.h */,
 				2879CE8C1D13ABDC00AD7F60 /* AppDelegate.m */,
@@ -318,6 +325,41 @@
 				30B18F051D814E9900366EA3 /* CSGLView.m */,
 				30B18F361D8179D100366EA3 /* CSHomeCollectionViewCell.h */,
 				30B18F371D8179D100366EA3 /* CSHomeCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30670DE71D927B5800A71D0E /* CSMine */ = {
+			isa = PBXGroup;
+			children = (
+				30670DE81D927B5800A71D0E /* Controller */,
+				30670DE91D927B5800A71D0E /* Model */,
+				30670DEA1D927B5800A71D0E /* View */,
+			);
+			path = CSMine;
+			sourceTree = "<group>";
+		};
+		30670DE81D927B5800A71D0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30670DEB1D927B8100A71D0E /* CSMineViewController.h */,
+				30670DEC1D927B8100A71D0E /* CSMineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		30670DE91D927B5800A71D0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30670DEA1D927B5800A71D0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30670DEE1D927B9F00A71D0E /* CSPrintView.h */,
+				30670DEF1D927B9F00A71D0E /* CSPrintView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,6 +594,7 @@
 				2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */,
 				30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */,
 				30B18F6C1D817B8F00366EA3 /* UIImageView+HighlightedWebCache.m in Sources */,
+				30670DED1D927B8100A71D0E /* CSMineViewController.m in Sources */,
 				30B18F381D8179D100366EA3 /* CSHomeCollectionViewCell.m in Sources */,
 				30B18F641D817B8F00366EA3 /* SDWebImageDownloader.m in Sources */,
 				30B18F621D817B8F00366EA3 /* SDWebImageCompat.m in Sources */,
@@ -561,6 +604,7 @@
 				30B18F211D814F1700366EA3 /* ZLCStlparser.mm in Sources */,
 				30B18F671D817B8F00366EA3 /* SDWebImagePrefetcher.m in Sources */,
 				30EF57201D87E44100F67C6C /* CSDownloadManager.m in Sources */,
+				30670DF01D927B9F00A71D0E /* CSPrintView.m in Sources */,
 				2879CE8D1D13ABDC00AD7F60 /* AppDelegate.m in Sources */,
 				30B18F5F1D817B8F00366EA3 /* MKAnnotationView+WebCache.m in Sources */,
 				30B18F6D1D817B8F00366EA3 /* UIImageView+WebCache.m in Sources */,
