@@ -10,6 +10,7 @@
 
 #import "CSHomeViewController.h"
 #import "CSGameViewController.h"
+#import "CSConnectViewController.h"
 #import "CSMineViewController.h"
 
 @interface CSTabBarController ()
@@ -29,11 +30,15 @@
     gameVC.title = @"游戏";
     UINavigationController *gameNavi = [[UINavigationController alloc] initWithRootViewController:gameVC];
     
+    CSConnectViewController *connectVC = [[CSConnectViewController alloc] init];
+    connectVC.title = @"链接";
+    UINavigationController *connectNavi = [[UINavigationController alloc] initWithRootViewController:connectVC];
+    
     CSMineViewController *mineVC = [[CSMineViewController alloc] init];
     mineVC.title = @"我的";
     UINavigationController *mineNavi = [[UINavigationController alloc] initWithRootViewController:mineVC];
     
-    self.viewControllers = @[homeNavi, gameNavi, mineNavi];
+    self.viewControllers = @[homeNavi, gameNavi, connectNavi, mineNavi];
 }
 
 - (void)didReceiveMemoryWarning {

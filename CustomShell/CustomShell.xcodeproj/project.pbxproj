@@ -19,6 +19,7 @@
 		3044E20B1D82689C004888BB /* placeholde.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3044E20A1D82689C004888BB /* placeholde.jpg */; };
 		30670DED1D927B8100A71D0E /* CSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30670DEC1D927B8100A71D0E /* CSMineViewController.m */; };
 		30670DF01D927B9F00A71D0E /* CSPrintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30670DEF1D927B9F00A71D0E /* CSPrintView.m */; };
+		30AE361E1D9A1D4400A3AD89 /* CS3DprintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AE361D1D9A1D4400A3AD89 /* CS3DprintView.m */; };
 		30B18F031D814BFA00366EA3 /* CSShellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F021D814BFA00366EA3 /* CSShellViewController.m */; };
 		30B18F061D814E9900366EA3 /* CSGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F051D814E9900366EA3 /* CSGLView.m */; };
 		30B18F1F1D814F1700366EA3 /* ksMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F191D814F1700366EA3 /* ksMatrix.c */; };
@@ -46,6 +47,8 @@
 		30B18F6D1D817B8F00366EA3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F5C1D817B8F00366EA3 /* UIImageView+WebCache.m */; };
 		30B18F6E1D817B8F00366EA3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B18F5E1D817B8F00366EA3 /* UIView+WebCacheOperation.m */; };
 		30C7D0141D8E35D700706121 /* CSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C7D0131D8E35D700706121 /* CSGameViewController.m */; };
+		30CBA7531D9B62A000528882 /* CSConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CBA7521D9B62A000528882 /* CSConnectViewController.m */; };
+		30CBA7561D9B632C00528882 /* CSBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CBA7551D9B632C00528882 /* CSBluetoothManager.m */; };
 		30EF57201D87E44100F67C6C /* CSDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF571F1D87E44100F67C6C /* CSDownloadManager.m */; };
 		30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF57221D87FCAB00F67C6C /* NSString+MD5.m */; };
 /* End PBXBuildFile section */
@@ -92,6 +95,8 @@
 		30670DEC1D927B8100A71D0E /* CSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMineViewController.m; sourceTree = "<group>"; };
 		30670DEE1D927B9F00A71D0E /* CSPrintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPrintView.h; sourceTree = "<group>"; };
 		30670DEF1D927B9F00A71D0E /* CSPrintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPrintView.m; sourceTree = "<group>"; };
+		30AE361C1D9A1D4400A3AD89 /* CS3DprintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS3DprintView.h; sourceTree = "<group>"; };
+		30AE361D1D9A1D4400A3AD89 /* CS3DprintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS3DprintView.m; sourceTree = "<group>"; };
 		30B18F011D814BFA00366EA3 /* CSShellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSShellViewController.h; sourceTree = "<group>"; };
 		30B18F021D814BFA00366EA3 /* CSShellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSShellViewController.m; sourceTree = "<group>"; };
 		30B18F041D814E9900366EA3 /* CSGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGLView.h; sourceTree = "<group>"; };
@@ -144,6 +149,10 @@
 		30B18F5E1D817B8F00366EA3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		30C7D0121D8E35D700706121 /* CSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGameViewController.h; sourceTree = "<group>"; };
 		30C7D0131D8E35D700706121 /* CSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSGameViewController.m; sourceTree = "<group>"; };
+		30CBA7511D9B62A000528882 /* CSConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSConnectViewController.h; sourceTree = "<group>"; };
+		30CBA7521D9B62A000528882 /* CSConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSConnectViewController.m; sourceTree = "<group>"; };
+		30CBA7541D9B632C00528882 /* CSBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBluetoothManager.h; sourceTree = "<group>"; };
+		30CBA7551D9B632C00528882 /* CSBluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBluetoothManager.m; sourceTree = "<group>"; };
 		30EF571E1D87E44100F67C6C /* CSDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDownloadManager.h; sourceTree = "<group>"; };
 		30EF571F1D87E44100F67C6C /* CSDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDownloadManager.m; sourceTree = "<group>"; };
 		30EF57211D87FCAB00F67C6C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -201,6 +210,7 @@
 				2879CEBB1D13AC1000AD7F60 /* CSBase */,
 				2879CEBF1D13AC1000AD7F60 /* CSHome */,
 				30C7D00E1D8E359B00706121 /* CSGame */,
+				30CBA74D1D9B628900528882 /* CSConnect */,
 				30670DE71D927B5800A71D0E /* CSMine */,
 				30B18F3C1D817B6B00366EA3 /* CSThirdparty */,
 				2879CE8B1D13ABDC00AD7F60 /* AppDelegate.h */,
@@ -360,6 +370,8 @@
 			children = (
 				30670DEE1D927B9F00A71D0E /* CSPrintView.h */,
 				30670DEF1D927B9F00A71D0E /* CSPrintView.m */,
+				30AE361C1D9A1D4400A3AD89 /* CS3DprintView.h */,
+				30AE361D1D9A1D4400A3AD89 /* CS3DprintView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,6 +451,41 @@
 			sourceTree = "<group>";
 		};
 		30C7D0111D8E359B00706121 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30CBA74D1D9B628900528882 /* CSConnect */ = {
+			isa = PBXGroup;
+			children = (
+				30CBA74E1D9B628900528882 /* Controller */,
+				30CBA74F1D9B628900528882 /* Model */,
+				30CBA7501D9B628900528882 /* View */,
+			);
+			path = CSConnect;
+			sourceTree = "<group>";
+		};
+		30CBA74E1D9B628900528882 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30CBA7511D9B62A000528882 /* CSConnectViewController.h */,
+				30CBA7521D9B62A000528882 /* CSConnectViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		30CBA74F1D9B628900528882 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30CBA7541D9B632C00528882 /* CSBluetoothManager.h */,
+				30CBA7551D9B632C00528882 /* CSBluetoothManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30CBA7501D9B628900528882 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -595,10 +642,13 @@
 				30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */,
 				30B18F6C1D817B8F00366EA3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				30670DED1D927B8100A71D0E /* CSMineViewController.m in Sources */,
+				30CBA7531D9B62A000528882 /* CSConnectViewController.m in Sources */,
 				30B18F381D8179D100366EA3 /* CSHomeCollectionViewCell.m in Sources */,
+				30AE361E1D9A1D4400A3AD89 /* CS3DprintView.m in Sources */,
 				30B18F641D817B8F00366EA3 /* SDWebImageDownloader.m in Sources */,
 				30B18F621D817B8F00366EA3 /* SDWebImageCompat.m in Sources */,
 				30B18F061D814E9900366EA3 /* CSGLView.m in Sources */,
+				30CBA7561D9B632C00528882 /* CSBluetoothManager.m in Sources */,
 				30B18F691D817B8F00366EA3 /* UIImage+GIF.m in Sources */,
 				30B18F6A1D817B8F00366EA3 /* UIImage+MultiFormat.m in Sources */,
 				30B18F211D814F1700366EA3 /* ZLCStlparser.mm in Sources */,
