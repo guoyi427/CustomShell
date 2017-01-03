@@ -50,6 +50,7 @@ struct STL_VertexInfo {
     
     CGPoint _rotatePoint;
     CGPoint _touchBeganPoint;
+    CGPoint _touchEndPoint;
     
     NSString *_stlPath;
     float *_stl_vertices;
@@ -314,10 +315,16 @@ struct STL_VertexInfo {
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     CGPoint point = [touches.anyObject locationInView:self];
-    _rotatePoint = CGPointMake(point.x - _touchBeganPoint.x, point.y - _touchBeganPoint.y);
+    _rotatePoint = CGPointMake(point.x - _touchBeganPoint.x + _touchEndPoint.x,
+                               point.y - _touchBeganPoint.y + _touchEndPoint.y);
     
     [self _updateModelView];
     [self renderStlWithPath:_stlPath];
+    NSLog(@"%@", NSStringFromCGPoint(_rotatePoint));
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    _touchEndPoint = _rotatePoint;
 }
 
 @end

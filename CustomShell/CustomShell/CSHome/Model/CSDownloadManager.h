@@ -13,7 +13,7 @@ typedef void(^FaildCallBack)(NSError *error);
 typedef void(^ReceivedCallBack)(NSData *receiveData);
 typedef void(^FinishedCallBack)(NSData *data);
 
-static NSString *HostURLString = @"http://10.15.151.114/";//@"http://1.119.0.59/";
+static NSString *HostURLString = @"http://192.168.28.137/";//@"http://10.15.151.114/";//@"http://1.119.0.59/";
 
 @interface CSDownloadManager : NSObject
 
