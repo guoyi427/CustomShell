@@ -53,6 +53,7 @@
 		30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF57221D87FCAB00F67C6C /* NSString+MD5.m */; };
 		5DC74B4C1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC74B4B1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m */; };
 		5DC74B4F1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC74B4E1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.m */; };
+		5DC74B551E1B926900DF88A5 /* CSCaipiaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC74B541E1B926900DF88A5 /* CSCaipiaoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		5DC74B4B1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCaipiaoRequestManager.m; sourceTree = "<group>"; };
 		5DC74B4D1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCaipiaoHistoryViewController.h; sourceTree = "<group>"; };
 		5DC74B4E1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCaipiaoHistoryViewController.m; sourceTree = "<group>"; };
+		5DC74B531E1B926900DF88A5 /* CSCaipiaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCaipiaoModel.h; sourceTree = "<group>"; };
+		5DC74B541E1B926900DF88A5 /* CSCaipiaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCaipiaoModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +501,8 @@
 			children = (
 				5DC74B4A1E1B71B500DF88A5 /* CSCaipiaoRequestManager.h */,
 				5DC74B4B1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m */,
+				5DC74B531E1B926900DF88A5 /* CSCaipiaoModel.h */,
+				5DC74B541E1B926900DF88A5 /* CSCaipiaoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 				30B18F601D817B8F00366EA3 /* NSData+ImageContentType.m in Sources */,
 				30B18F3B1D817A0700366EA3 /* CSHomeModel.m in Sources */,
 				30B18F631D817B8F00366EA3 /* SDWebImageDecoder.m in Sources */,
+				5DC74B551E1B926900DF88A5 /* CSCaipiaoModel.m in Sources */,
 				2879CEC81D13D4E300AD7F60 /* CSTabBarController.m in Sources */,
 				30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */,
 				30B18F6C1D817B8F00366EA3 /* UIImageView+HighlightedWebCache.m in Sources */,
