@@ -51,6 +51,8 @@
 		30CBA7561D9B632C00528882 /* CSBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CBA7551D9B632C00528882 /* CSBluetoothManager.m */; };
 		30EF57201D87E44100F67C6C /* CSDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF571F1D87E44100F67C6C /* CSDownloadManager.m */; };
 		30EF57231D87FCAB00F67C6C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EF57221D87FCAB00F67C6C /* NSString+MD5.m */; };
+		5DC74B4C1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC74B4B1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m */; };
+		5DC74B4F1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC74B4E1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +159,10 @@
 		30EF571F1D87E44100F67C6C /* CSDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDownloadManager.m; sourceTree = "<group>"; };
 		30EF57211D87FCAB00F67C6C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		30EF57221D87FCAB00F67C6C /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		5DC74B4A1E1B71B500DF88A5 /* CSCaipiaoRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCaipiaoRequestManager.h; sourceTree = "<group>"; };
+		5DC74B4B1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCaipiaoRequestManager.m; sourceTree = "<group>"; };
+		5DC74B4D1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCaipiaoHistoryViewController.h; sourceTree = "<group>"; };
+		5DC74B4E1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCaipiaoHistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,7 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				30670DE81D927B5800A71D0E /* Controller */,
-				30670DE91D927B5800A71D0E /* Model */,
+				5DC74B491E1B718A00DF88A5 /* Model */,
 				30670DEA1D927B5800A71D0E /* View */,
 			);
 			path = CSMine;
@@ -354,15 +360,10 @@
 			children = (
 				30670DEB1D927B8100A71D0E /* CSMineViewController.h */,
 				30670DEC1D927B8100A71D0E /* CSMineViewController.m */,
+				5DC74B4D1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.h */,
+				5DC74B4E1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		30670DE91D927B5800A71D0E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		30670DEA1D927B5800A71D0E /* View */ = {
@@ -490,6 +491,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5DC74B491E1B718A00DF88A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DC74B4A1E1B71B500DF88A5 /* CSCaipiaoRequestManager.h */,
+				5DC74B4B1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +645,8 @@
 				30B18F651D817B8F00366EA3 /* SDWebImageDownloaderOperation.m in Sources */,
 				30B18F201D814F1700366EA3 /* ksVector.c in Sources */,
 				30B18F611D817B8F00366EA3 /* SDImageCache.m in Sources */,
+				5DC74B4C1E1B71B500DF88A5 /* CSCaipiaoRequestManager.m in Sources */,
+				5DC74B4F1E1B7F3800DF88A5 /* CSCaipiaoHistoryViewController.m in Sources */,
 				30B18F601D817B8F00366EA3 /* NSData+ImageContentType.m in Sources */,
 				30B18F3B1D817A0700366EA3 /* CSHomeModel.m in Sources */,
 				30B18F631D817B8F00366EA3 /* SDWebImageDecoder.m in Sources */,

@@ -8,12 +8,18 @@
 
 #import "CSMineViewController.h"
 
+//  View
 #import "CSPrintView.h"
+
+//  Model
+#import "CSCaipiaoRequestManager.h"
+
+//  Controller
+#import "CSCaipiaoHistoryViewController.h"
 
 @interface CSMineViewController ()
 {
-    @private
-    CSPrintView *_printView;
+    
 }
 @end
 
@@ -21,9 +27,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _printView = [[CSPrintView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:_printView];
+    
+    [self _prepareData];
+    [self _prepareUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,12 +37,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Touch - Delegate
+#pragma mark - Prepare
 
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    CGPoint point = [touches.anyObject locationInView:self.view];
-    
-    [_printView addPoint:point];
+- (void)_prepareData {
+
 }
+
+- (void)_prepareUI {
+    UIButton *caipiaoHistoryBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    caipiaoHistoryBtn.frame = CGRectMake(10, 10, ScreenWidth/2.0f, ScreenWidth/2.0);
+    [caipiaoHistoryBtn setTitle:@"History" forState:UIControlStateNormal];
+    [caipiaoHistoryBtn addTarget:self action:@selector(caipiaoHistoryButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:caipiaoHistoryBtn];
+    
+}
+
+#pragma mark - Button - Action
+
+- (void)caipiaoHistoryButtonAction {
+    CSCaipiaoHistoryViewController *historyController = [[CSCaipiaoHistoryViewController alloc] init];
+    [self.navigationController pushViewController:historyController animated:YES];
+}
+
 
 @end
